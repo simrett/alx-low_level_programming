@@ -2,11 +2,12 @@
 #include <time.h>
 #include <stdio.h>
 /* more headers goes there */
-/*
- *main - print the last digit of the number stored in the variable n
+/**
+ * main - print the last digit of the number stored in the variable n
  *
- *Return: Always 0 (success)
+ * Return: Always 0 (success)
  */
+
 int main(void)
 {
 	int n, lastDgt;
