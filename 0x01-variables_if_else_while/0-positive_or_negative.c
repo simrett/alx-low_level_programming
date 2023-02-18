@@ -2,8 +2,9 @@
 #include <time.h>
 #include <stdio.h>
 /* more headers goes there */
-/*
- *main - Entry point
+/**
+ *main - Entry point for the program
+ *
  *Return: Always 0 (success)
  */
 int main(void)
