@@ -4,9 +4,9 @@
 /*
  * main - Entry point of the program
  *  
- * Prints all possible combinations of single-digit numbers.
+ * This function Prints all possible combinations of single-digit numbers.
  *
- * Return: Always 0 (success)
+ * Return: Always 0.
  */
 int main(void)
 {
