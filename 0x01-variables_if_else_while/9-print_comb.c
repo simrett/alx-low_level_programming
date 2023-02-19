@@ -2,7 +2,7 @@
 /* more headers goes there */
 
 /*
- *  main - Prints all single digit numbers of base 10
+ *  main - Prints all possible combinations of single-digit numbers.
  *
  *  Return: Always 0 (success)
  *
