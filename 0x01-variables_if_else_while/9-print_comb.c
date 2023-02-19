@@ -2,10 +2,11 @@
 /* more headers goes there */
 
 /*
- * main - Prints all possible combinations of single-digit numbers.
+ * main - Entry point of the program
+ *  
+ * Prints all possible combinations of single-digit numbers.
  *
  * Return: Always 0 (success)
- *
  */
 int main(void)
 {
