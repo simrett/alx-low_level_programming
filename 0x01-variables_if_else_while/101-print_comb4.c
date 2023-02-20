@@ -11,21 +11,26 @@
  */
 int main(void)
 {
-	int n;
+	int i, j, k;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	if (n > 0)
+	for (i = 0; i <= 7; i++)
 	{
-		printf("%i is postive\n", n);
+		for (j = i + 1; j <= 8; j++)
+		{
+			for (k = j + 1; k <= 9; k++)
+			{
+				putchar(i + '0');
+				putchar(j + '0');
+				putchar(k + '0');
+
+				if (i != 7 || j != 8 || k != 9)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
 	}
-	else if (n < 0)
-	{
-		printf("%i is negative\n", n);
-	}
-	else
-	{
-		printf("%i is zero\n", n);
-	}
+	putchar('\n');
 	return (0);
 }
