@@ -3,8 +3,7 @@
 
 /**
  * print_times_table - Prints the times table of the input,
- *
- *	starting with 0. 
+ *starting with 0. 
  *
  * @n: value of table to be printed starting from 0
  *
@@ -26,7 +25,6 @@ void print_times_table(int n)
 			_putchar(',');
 			_putchar(' ');	
 			prod = num * multi;
-
 			if (prod <= 99)
 				_putchar(' ');
 			if (prod <= 9)
