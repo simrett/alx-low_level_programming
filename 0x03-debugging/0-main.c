@@ -1,6 +1,6 @@
 #include "main.h"
 
-/** main - Test function for postive or negative
+/** main - tests function that prints if integer is postive or negative
  * Return: 0
  */
 
