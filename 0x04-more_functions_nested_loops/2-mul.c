@@ -2,13 +2,13 @@
 #include <stdio.h>
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * mul - return multiplication of a * b
+ * @a: first number to multiply
+ * @b: secondary number to multiply
+ * Return: multiplication of a * b
  */
-int main(void)
+
+int mul(int a, int b)
 {
-	printf("%d\n", mul(98, 1024));
-	printf("%d\n", mul(-402, 4096));
-	return (0);
+	return (a * b);
 }
