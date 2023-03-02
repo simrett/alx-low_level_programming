@@ -1,1 +1,1 @@
-readme for 0x04-more_functions_nested_loops
+pointers arrays and strings
