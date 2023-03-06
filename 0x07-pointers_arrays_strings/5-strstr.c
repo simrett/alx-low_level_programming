@@ -27,7 +27,7 @@ while (*(haystack + n) == *(needle + m))
 {
 n++;
 m++;
-if ((m == len_needle) && *(haystack + n) == *(needle + len_needle))
+if ((m == len_needle) &&*(haystack + n) == *(needle + len_needle))
 {
 return (haystack + (n - len_needle));
 }
