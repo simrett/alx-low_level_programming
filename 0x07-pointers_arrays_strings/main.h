@@ -13,3 +13,5 @@ char *_strstr(char *haystack, char *needle);
 int _strlen(char *s);
 void print_diagsums(int *a, int size);
 void set_string(char **s, char *to);
+
+#endif /* MAIN_H */
