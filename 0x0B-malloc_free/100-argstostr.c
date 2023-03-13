@@ -6,7 +6,7 @@ int _strlen(char *str);
 
 /**
  * argstostr - allocates memory to a concatenation all arguments to a program
- *	with \n between each argument
+ * with \n between each argument
  * @ac: number of arguments
  * @av: array of string arguments
  *
@@ -19,19 +19,18 @@ char *ptr;
 
 if (ac == 0 || av == NULL)
 {
-return (NULL);
+	return (NULL);
 }
 
 for (i = 0; i < ac; i++)
-
+{
 totalStrLen += _strlen(av[i]) + 1;
 }
 
 ptr = malloc(sizeof(char) * totalStrLen + 1);
-
 if (ptr == NULL)
 {
-return (NULL);
+	return (NULL);
 }
 
 for (i = 0; i < ac; i++, k++)
@@ -40,12 +39,12 @@ for (j = 0; j < _strlen(av[i]); j++, k++)
 {
 ptr[k] = av[i][j];
 }
-ptr[k] = '\n'; /* add '\n' after each argument */
+ptr[k] = '\n';
 }
 
 ptr[k] = '\0';
 
-return (ptr);
+	return (ptr);
 }
 
 /**
@@ -61,18 +60,5 @@ int i;
 for (i = 0; str[i] != '\0'; i++)
 ;
 
-return (i);
+	return (i);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
