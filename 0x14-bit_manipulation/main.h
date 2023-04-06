@@ -1,5 +1,5 @@
-#ifndef __MAIN_H__
-#define __MAIN_H__
+#ifndef BYTES_H
+#define BYTES_H
 
 #include <stdio.h>
 #include <stdlib.h>
