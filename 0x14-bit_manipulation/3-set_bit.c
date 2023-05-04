@@ -7,6 +7,7 @@
  * @index: index of the bit.
  *
  * Return: 1 if it worked, -1 if it didn't.
+ *
  */
 int set_bit(unsigned long int *numptr, unsigned int index)
 {
