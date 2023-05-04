@@ -7,7 +7,7 @@
  *
  * Return: unsigned int.
  */
-unsigned int convert_binary_to_uint(const char *binary)
+unsigned int binary_to_uint(const char *binary)
 {
 	unsigned int decimal;
 	int length, power;
