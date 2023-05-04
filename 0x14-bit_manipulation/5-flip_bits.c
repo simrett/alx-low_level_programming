@@ -1,25 +1,22 @@
 #include "main.h"
 
 /**
- * count_bits_to_flip - returns the number of bits that need
- * to be flipped to convert one number to another.
- * @num1: the first number.
- * @num2: the second number.
+ * flip_bits - returns the number of bits you would
+ * need to flip to get from one number to another
+ * @num1: number one.
+ * @num2: number two.
  *
- * Return: the number of bits to flip.
+ * Return: number of bits.
  */
-unsigned int count_bits_to_flip(unsigned long int num1, unsigned long int num2)
+unsigned int flip_bits(unsigned long int num1, unsigned long int num2)
 {
-	unsigned int bits_to_flip = 0;
+	unsigned int nbits;
 
-	while (num1 != 0 || num2 != 0)
+	for (nbits = 0; num1 || num2; num1 >>= 1, num2 >>= 1)
 	{
 		if ((num1 & 1) != (num2 & 1))
-			bits_to_flip++;
-
-		num1 >>= 1;
-		num2 >>= 1;
+			nbits++;
 	}
 
-	return (bits_to_flip);
+	return (nbits);
 }
