@@ -23,4 +23,4 @@ unsigned int flip_bits(unsigned long int a, unsigned long int b)
 
 	return (nbits);
 }
-i
+
