@@ -31,7 +31,8 @@ int append_text_to_file(const char *filename, char *text)
 		length++;
 
 	ssize_t bytes_written = write(file_descriptor, text, length);
-	if (bytes_written == -1 || (size_t)bytes_written != length)
+
+	if (bytes_written == -1 || (size_t) bytes_written != length)
 	{
 		close(file_descriptor);
 		return (-1);
