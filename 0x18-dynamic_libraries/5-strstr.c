@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 
-int _strlen(char *s);
+
 /**
  * _strstr - Locates a substring
  * @haystack: the string to be checked
@@ -35,23 +35,4 @@ return (haystack + (n - len_needle));
 }
 }
 return ('\0');
-}
-
-
-/**
- * _strlen - calculates the length of a string
- * @s: The string that the length will be calculated on
- *
- * Return: The length of the string
- */
-int _strlen(char *s)
-{
-int n = 0;
-
-while (*s != '\0')
-{
-s++;
-n++;
-}
-return (n);
 }
