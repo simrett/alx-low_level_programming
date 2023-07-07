@@ -1,39 +1,53 @@
 #include "hash_tables.h"
+#include <stdio.h>
+
+int not_last_node(const hash_table_t *ht, hash_node_t *node);
 
 /**
- * hash_table_print - Prints a hash table.
- * @ht: A pointer to the hash table to print.
- *
- * Description: Key/value pairs are printed in the order
- *              they appear in the array of the hash table.
+ * hash_table_print - prints the contents of a hash table
+ * @ht: hash table to print
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	hash_node_t *node;
 	unsigned long int i;
-	unsigned char comma_flag = 0;
+	hash_node_t *node = NULL;
 
-	if (ht == NULL)
-		return;
 
-	printf("{");
-	for (i = 0; i < ht->size; i++)
+	putchar('{');
+	if (ht)
 	{
-		if (ht->array[i] != NULL)
+		for (i = 0; i < ht->size; i++)
 		{
-			if (comma_flag == 1)
-				printf(", ");
-
 			node = ht->array[i];
-			while (node != NULL)
+			while (node)
 			{
 				printf("'%s': '%s'", node->key, node->value);
-				node = node->next;
-				if (node != NULL)
+				if (not_last_node(ht, node))
 					printf(", ");
+				node = node->next;
 			}
-			comma_flag = 1;
 		}
 	}
 	printf("}\n");
+}
+
+/**
+ * not_last_node - checks if index where node is is the last node
+   of a hash table.
+ * @ht: hash table to check
+ * @node: node to check
+ *
+ * Return: (0) is last node, (1) not last node
+ */
+int not_last_node(const hash_table_t *ht, hash_node_t *node)
+{
+	unsigned long int key_i = 0;
+
+	key_i = key_index((unsigned char *)node->key, ht->size);
+	for (key_i = key_i + 1; key_i < ht->size; key_i++)
+	{
+		if (ht->array[key_i] != NULL)
+			return (1);
+	}
+	return (0);
 }
